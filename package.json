@@ -15,6 +15,10 @@
     "sweetness",
     "hashtag"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoshRagem/tagalog.git"
+  },
   "author": "Joshua Barney",
   "license": "MIT"
 }
