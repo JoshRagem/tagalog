@@ -1,0 +1,20 @@
+{
+  "name": "tagalog",
+  "version": "0.0.0",
+  "description": "A tagged logging library (with plugins!)",
+  "main": "tag.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tag",
+    "log",
+    "logging",
+    "logs",
+    "tags",
+    "sweetness",
+    "hashtag"
+  ],
+  "author": "Joshua Barney",
+  "license": "MIT"
+}
