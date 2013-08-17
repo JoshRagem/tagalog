@@ -4,7 +4,7 @@
   "description": "A tagged logging library (with plugins!)",
   "main": "tag.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/try_it_out.js"
   },
   "keywords": [
     "tag",
