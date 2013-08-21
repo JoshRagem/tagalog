@@ -1,32 +1,36 @@
+var util = require('util'),
 
-var prototagalog = {
+prototagalog = {
 
     regex: /#[\w]+/g,
     
     default_tag: 'default',
 
     debug:function(){
-        var arg, args, tag, tags
+        var i, count, arg, args, tag, tags, bod = ''
         
         args = Array.prototype.slice.call(arguments)
+
+        for (i = 0, count=args.length; i < count; i++) {
+            arg = args[i]
+            
+            if ('string' != typeof arg) {
+                arg = util.inspect(arg)
+            }
+            bod += arg+(count?' ':'')
+        }
         
-        for (arg in args) {
-            arg = args[arg]
-            if ('string' == typeof arg) {
+        tags = bod.match(this.regex) || [this.default_tag]
                 
-                tags = arg.match(this.regex) || [this.default_tag]
-                
-                for (tag in tags) {
-                    tag = tags[tag]
-                    
-                    teg = tag.replace('#', '')
-                    
-                    if (this.outputs[teg]) {
-                    
-                        this.outputs[teg].write(arg)
-                        this.outputs[teg].write('\n')
-                    }
-                }
+        for (i = 0, count = tags.length; i < count; i++) {
+            tag = tags[i]
+            
+            teg = tag.replace('#', '')
+            
+            if (this.outputs[teg]) {
+
+                this.outputs[teg].write(bod)
+                this.outputs[teg].write('\n')
             }
         }
     }
