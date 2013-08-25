@@ -10,11 +10,11 @@ log = new tag({
     'jimbo':fs.createWriteStream(resolve(__dirname, './test.txt'))
 })
 
-log.debug('hello john, this is it')
-log.debug('hello #john, this is it')
-log.debug('hello #josh, this is it')
-log.debug('hello #joe, this is it')
-log.debug('hello #jimbo, this is it')
-log.debug('hello #jimbo, this is object', {helol:'wold'})
+log.josh('hello john, this is it')
+log('hello #john, this is it')
+log('hello #josh, this is it')
+log('hello #joe, this is it')
+log('hello #jimbo, this is it')
+log('hello #jimbo, this is object', {helol:'wold'})
 
-log.debug('end')
+log.default('end')
