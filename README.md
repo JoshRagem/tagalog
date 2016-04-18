@@ -1,3 +1,5 @@
+This repository is just an idea I had after frustration with log levels. I think that log levels don't work. I would prefer to log everything and filter it later for what I want. Tagalog is not maintained.
+
 tagalog
 =======
 
